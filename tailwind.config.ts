@@ -47,6 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        minecraft: {
+          gold: "hsl(var(--minecraft-gold))",
+          dark: "hsl(var(--minecraft-dark))",
+          gray: "hsl(var(--minecraft-gray))",
+          "light-gray": "hsl(var(--minecraft-light-gray))",
+          text: "hsl(var(--minecraft-text))",
+          glow: "hsl(var(--minecraft-glow))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -58,6 +66,10 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        pixel: ['"Press Start 2P"', 'cursive'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -65,25 +77,42 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        pulse_glow: {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(45 100% 50% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(45 100% 50% / 0.6)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        float: "float 3s ease-in-out infinite",
+        "pulse-glow": "pulse_glow 2s ease-in-out infinite",
+        shimmer: "shimmer 2s linear infinite",
+      },
+      backgroundImage: {
+        "gradient-gold": "var(--gradient-gold)",
+        "gradient-dark": "var(--gradient-dark)",
+        "gradient-card": "var(--gradient-card)",
+      },
+      boxShadow: {
+        gold: "var(--shadow-gold)",
+        card: "var(--shadow-card)",
+        pixel: "var(--shadow-pixel)",
       },
     },
   },
