@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { BlockPattern } from "@/components/BlockPattern";
-import { Coins, Crown, Pickaxe, Sword } from "lucide-react";
+import { Coins, Crown, Pickaxe, Sword, Heart, Target, Bed, Swords, Shield, Crosshair } from "lucide-react";
 
 const Index = () => {
   return (
@@ -60,8 +60,106 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
 
-      {/* Features Section */}
+      {/* Realms Section */}
       <section className="py-20 relative">
+        <div className="container mx-auto px-4">
+          <h2 className="font-pixel text-lg md:text-xl text-primary text-center mb-4 text-glow">
+            Game Realms
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
+            Choose your battlefield and dominate the competition
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Lifesteal */}
+            <div className="relative bg-card border-2 border-red-500/30 rounded-lg p-6 card-hover group overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse">
+                  <Heart className="w-10 h-10 text-red-500" />
+                </div>
+                <h3 className="font-pixel text-sm text-red-500 text-center mb-3">Lifesteal</h3>
+                <p className="text-sm text-muted-foreground text-center mb-4">
+                  Kill to steal hearts, die and lose them forever. Survive the ultimate PvP challenge!
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2 text-secondary-foreground">
+                    <Swords className="w-4 h-4 text-red-500/70" />
+                    Intense PvP combat
+                  </li>
+                  <li className="flex items-center gap-2 text-secondary-foreground">
+                    <Heart className="w-4 h-4 text-red-500/70" />
+                    Heart stealing mechanic
+                  </li>
+                  <li className="flex items-center gap-2 text-secondary-foreground">
+                    <Shield className="w-4 h-4 text-red-500/70" />
+                    Custom enchants & items
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Practice */}
+            <div className="relative bg-card border-2 border-blue-500/30 rounded-lg p-6 card-hover group overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse">
+                  <Target className="w-10 h-10 text-blue-500" />
+                </div>
+                <h3 className="font-pixel text-sm text-blue-500 text-center mb-3">Practice</h3>
+                <p className="text-sm text-muted-foreground text-center mb-4">
+                  Sharpen your skills in various PvP modes. Train to become the ultimate fighter!
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2 text-secondary-foreground">
+                    <Crosshair className="w-4 h-4 text-blue-500/70" />
+                    Multiple PvP modes
+                  </li>
+                  <li className="flex items-center gap-2 text-secondary-foreground">
+                    <Swords className="w-4 h-4 text-blue-500/70" />
+                    1v1 & FFA arenas
+                  </li>
+                  <li className="flex items-center gap-2 text-secondary-foreground">
+                    <Target className="w-4 h-4 text-blue-500/70" />
+                    Ranked matchmaking
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Bedwars */}
+            <div className="relative bg-card border-2 border-purple-500/30 rounded-lg p-6 card-hover group overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse">
+                  <Bed className="w-10 h-10 text-purple-500" />
+                </div>
+                <h3 className="font-pixel text-sm text-purple-500 text-center mb-3">Bedwars</h3>
+                <p className="text-sm text-muted-foreground text-center mb-4">
+                  Protect your bed and destroy your enemies. Team-based strategic warfare awaits!
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2 text-secondary-foreground">
+                    <Bed className="w-4 h-4 text-purple-500/70" />
+                    Classic bed protection
+                  </li>
+                  <li className="flex items-center gap-2 text-secondary-foreground">
+                    <Coins className="w-4 h-4 text-purple-500/70" />
+                    Resource generators
+                  </li>
+                  <li className="flex items-center gap-2 text-secondary-foreground">
+                    <Shield className="w-4 h-4 text-purple-500/70" />
+                    Solo, Duos & Squads
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 relative bg-card/30">
         <div className="container mx-auto px-4">
           <h2 className="font-pixel text-lg md:text-xl text-primary text-center mb-4 text-glow">
             Why Choose ArixMC?
